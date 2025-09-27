@@ -13,4 +13,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('love_sandwiches')
 
 sales = SHEET.worksheet('sales')
-print(sales.get_all_values())
+data = sales.get_all_values()
+
+print(data)
